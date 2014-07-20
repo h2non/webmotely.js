@@ -37,9 +37,11 @@
 
   Webmotely.prototype.options = {
     server: 'ws://localhost:3000'
+    room: room
   }
 
   Webmotely.prototype._connect = function () {
+    var room = this.options.room
     var primus = this.con
     var cursor = false
     primus.once('open', function () {
@@ -58,11 +60,11 @@
   }
 
   Webmotely.prototype.send = function (data) {
-    this.con.write({ room: room, data: data })
+    this.con.write({ room: this.options.room, data: data })
   }
 
   Webmotely.prototype.leave = function () {
-    this.con.write({ action: 'leave', room: room })
+    this.con.write({ action: 'leave', room: this.options.room })
   }
 
   Webmotely.prototype._init = function () {
@@ -79,7 +81,7 @@
             width: w.innerWidth || e.clientWidth || g.clientWidth,
             height: w.innerHeight || e.clientHeight|| g.clientHeight
           }
-          self.write({ room: room, data: data })
+          self.write({ room: self.options.room, data: data })
         }
       }
     }
@@ -163,7 +165,7 @@
 
   function triggerKey(data) {
     var el = document.elementFromPoint(data.elX, data.elY)
-    if (data.value && el) {
+    if (el && typeof data.value === 'string') {
       if (el.tagName !== 'INPUT') {
         if (el = el.querySelector('input')) {
           el.value = data.value
