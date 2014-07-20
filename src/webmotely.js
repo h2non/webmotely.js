@@ -1,7 +1,22 @@
 (function (global) {
-  var server = 'ws://localhost:3000'
   var room = 'c3ce9e42-0f7e-11e4-8261-b2227cce2b54'
   var element = null
+
+  function toArray(arr) {
+    return Array.prototype.slice.call(arr)
+  }
+
+  function extend(target) {
+    var origins = toArray(arguments).slice(1)
+    origins.forEach(function (origin) {
+      for (var key in origin) {
+        if (origin.hasOwnProperty(key)) {
+          target[key] = origin[key]
+        }
+      }
+    }}
+    return target
+  }
 
   function throttle(fn, ms) {
     var time = new Date().getTime()
@@ -13,10 +28,15 @@
     }
   }
 
-  function Webmotely() {
-    this.con = Primus.connect(server)
+  function Webmotely(options) {
+    this.options = extend({}, this.options, options)
+    this.con = Primus.connect(this.options.server)
     this._connect()
     this._init()
+  }
+
+  Webmotely.prototype.options = {
+    server: 'ws://localhost:3000'
   }
 
   Webmotely.prototype._connect = function () {
