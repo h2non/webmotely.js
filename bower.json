@@ -1,0 +1,34 @@
+{
+  "name": "webmotely",
+  "version": "0.1.0",
+  "description": "Webmotely JavaScript client",
+  "license": "MIT",
+  "author": "Tomas Aparicio",
+  "main": "./webmotely.js",
+  "homepage": "https://github.com/webmotely/webmotely.js",
+  "repository": "webmotely/webmotely.js",
+  "keywords": [
+    "remote",
+    "control",
+    "desktop",
+    "screen",
+    "share"
+  ],
+  "ignore": [
+    "**/.*",
+    ".*",
+    "*.md",
+    "src",
+    "lib",
+    "test",
+    "Makefile",
+    ".editorconfig",
+    ".gitignore",
+    ".travis.yml",
+    ".npmignore",
+    "package.json"
+  ],
+  "dependencies": {
+    "primus": "~2.3.0"
+  }
+}
