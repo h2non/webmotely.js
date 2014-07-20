@@ -1,5 +1,7 @@
 # webmotely [![Build Status](https://secure.travis-ci.org/webmotely/webmotely.js.png?branch=master)][travis]
 
+> This project is a proof of concept
+
 Webmotely JavaScript client (proof of concept)
 
 ## Installation
