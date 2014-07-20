@@ -14,7 +14,7 @@
           target[key] = origin[key]
         }
       }
-    }}
+    })
     return target
   }
 
