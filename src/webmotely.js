@@ -90,7 +90,7 @@
     div.style.position = 'fixed'
     div.style.zIndex = 10000
     div.style.top = '-50px'
-    div.innerHTML = '<img src="/static/cursor.png" width="18" />'
+    div.innerHTML = '<img src="http://rawgit.com/webmotely/webmotely.js/master/static/cursor.png" width="18" />'
     document.body.appendChild(div)
     return div
   }
