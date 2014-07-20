@@ -1,6 +1,6 @@
-# webmotely [![Build Status](https://secure.travis-ci.org/h2non/webmotely.js.png?branch=master)][travis] [![NPM version](https://badge.fury.io/js/webmotely.js.png)][npm]
+# webmotely [![Build Status](https://secure.travis-ci.org/webmotely/webmotely.js.png?branch=master)][travis]
 
-Webmotely JavaScript client
+Webmotely JavaScript client (proof of concept)
 
 ## Installation
 
