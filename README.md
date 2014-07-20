@@ -1,8 +1,12 @@
-# webmotely [![Build Status](https://secure.travis-ci.org/webmotely/webmotely.js.png?branch=master)][travis]
+# webmotely
+
+<!--
+[![Build Status](https://secure.travis-ci.org/webmotely/webmotely.js.png?branch=master)][travis]
+-->
 
 > This project is a proof of concept
 
-Webmotely JavaScript client (proof of concept)
+Webmotely JavaScript client
 
 ## Installation
 
@@ -21,7 +25,7 @@ bower install webmotely --save
 
 Or loading the script remotely
 ```html
-<script src="//cdn.rawgit.com/h2non/webmotely/0.1.1/webmotely.js"></script>
+<script src="//cdn.rawgit.com/webmotely/webmotely.js/0.1.0/webmotely.js"></script>
 ```
 
 ### Environments
@@ -41,7 +45,9 @@ var webmotely = require('webmotely')
 ```
 
 ```js
-// to do
+webmotely.start({
+  server: 'ws://my.server.net:3000'
+})
 ```
 
 ## API
