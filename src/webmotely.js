@@ -36,7 +36,7 @@
   }
 
   Webmotely.prototype.options = {
-    server: 'ws://localhost:3000'
+    server: 'ws://localhost:3000',
     room: room
   }
 

@@ -1,5 +1,5 @@
 {
-  "name": "injecty",
+  "name": "webmotely",
   "private": true,
   "scripts": {
     "test": "make test"

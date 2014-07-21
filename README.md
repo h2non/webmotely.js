@@ -6,15 +6,11 @@
 
 > This project is a proof of concept
 
-Webmotely JavaScript client
+**Webmotely** JavaScript client to enable remote control for Web applications
+
+To see it in action, visit the [demo](http://webmotely.github.io/demo) page
 
 ## Installation
-
-#### Node.js
-
-```bash
-npm install webmotely --save
-```
 
 #### Browser
 
@@ -58,7 +54,7 @@ Only [node.js](http://nodejs.org) is required for development
 
 Clone/fork this repository
 ```
-$ git clone https://github.com/h2non/webmotely.git && cd webmotely
+$ git clone https://github.com/webmotely/webmotely.js.git && cd webmotely.js
 ```
 
 Install package dependencies
